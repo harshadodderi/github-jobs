@@ -8,7 +8,8 @@ function App() {
   const [page, setPage] = useState(1);
   const { jobs, loading, error } = useFetchJobs(params, page);
   return (
-    <Container>
+    <Container className='my-4'>
+      <h1 className='mb-4'>Github Jobs</h1>
       {loading && <h1>Loading</h1>}
       {error && <h1>Try refreshing</h1>}
       <h1>
